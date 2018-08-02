@@ -1,0 +1,831 @@
+/*---------------------------------------------------------------------------------
+
+ Theme Name:   Divi 5 Star Hotel
+ Theme URI:    https://5starhotel.magiwebdesign.com/
+ Description:  A Premium Divi Child Theme designed for Hoteliers worldwide. ;-)
+ Author:       MAGI Web Design
+ Author URI:   https://www.magiwebdesign.com
+ Template:     Divi
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+
+------------------------------ DIVI 5 STAR HOTEL CSS HERE ------------------------------*/
+
+/*
+DIVI 5 STAR HOTEL STYLES ARE BELOW.
+EDIT AT YOUR OWN RISK.
+YOU CAN ADD YOUR OWN CUSTOM CSS AT THE BOTTOM OF THIS FILE.
+*/
+
+/* SECONDARY MENU STYLING */ 
+#top-header .container {
+ padding: 0 !important;
+} 
+#et-secondary-menu {
+ float: none;
+} 
+#et-secondary-nav li {
+ margin-right: 0;
+}
+#et-secondary-nav li a {
+ padding: 0.75em 1em;
+}
+#et-secondary-nav {
+ width: 100%;
+ text-align: right;
+} 
+#page-container #et-secondary-menu li a:hover {
+color: #f2f2f2 !important;
+opacity: 1 !important;
+}
+#et-secondary-nav li.left {
+ float: left;
+ font-size: 14px;
+}
+.fa-facebook-f:before, .fa-facebook:before {
+ font-size: 20px;
+}
+.fa-yelp:before {
+ font-size: 20px;
+}
+.fa-tripadvisor:before {
+ font-size: 20px;
+}
+
+/* SECONDARY MENU MOBILE */
+@media screen and (min-width: 320px) and (max-width: 1079px) {
+#mobile_menu li.top-social-icon {
+ display: none !important;
+}
+#mobile_menu li.left {
+ display: none !important;
+}
+}
+
+/* UNDERLINE MENU HOVER */
+#top-menu .current-menu-item a::before,
+#top-menu .current_page_item a::before {
+ content: "";
+ position: absolute;
+ z-index: 2;
+ left: 0;
+ right: 0;
+}
+#top-menu li a:before {
+ content: "";
+ position: absolute;
+ z-index: -2;
+ left: 0;
+ right: 100%;
+ bottom: 50%;
+ background: #15bf86; /*** COLOR OF THE LINE ***/
+ height: 2px; /*** THICKNESS OF THE LINE ***/
+ -webkit-transition-property: right;
+ transition-property: right;
+ -webkit-transition-duration: 0.3s;
+ transition-duration: 0.3s;
+ -webkit-transition-timing-function: ease-out;
+ transition-timing-function: ease-out;
+}
+#top-menu li a:hover {
+ opacity: 1 !important;
+}
+#top-menu li a:hover:before {
+ right: 0;
+}
+#top-menu li li a:before {
+ bottom: 10%;
+}
+
+/* REMOVE BLUE TOP LINE SUBMENUS */
+.nav li ul {
+ border-top: 0; 
+}
+
+/* ARCHIVE FULLWIDTH NO SIDEBAR */
+.archive #left-area {
+ width:100%; 
+}
+.archive .et_pb_post {
+ padding-bottom: 60px;
+}
+
+/**  REMOVE DIVIDING SIDEBAR LINE **/
+.container:before {
+ background-color:transparent !important; 
+}
+.et_pb_widget_area_right {
+ border-left:0 !important; 
+}
+.et_pb_widget_area_left {
+ border-right:0 !important; 
+}
+
+/* LINK COLOR & HOVER */
+a:link {
+ transition: color 1s ease;
+ color: #1599c1;
+}
+a:hover {
+ color: #15bf86;
+}
+
+/* DIVI BUTTON HOVER */
+.et_pb_button {
+ -webkit-transition: all 0.3s ease-in !important;
+ -moz-transition: all 0.3s ease-in !important;
+ transition: all 0.3s ease-in !important;
+}
+
+/* HIDE DIVI BOTTOM FOOTER */
+#footer-bottom {
+ display: none;
+ padding: 0px 0 0px;
+}
+
+/* POST NAVIGATION COLOR */
+.nav-single a {
+ color: #1599c1 !important;
+}
+
+/* BACK TO TOP BUTTON MATERIAL DESIGN */
+.et_pb_scroll_top.et-pb-icon {
+ bottom: 30px;
+ right: 30px;
+ border-radius: 50%;
+ width: 60px;
+ height: 60px;
+ padding-top: 8px;
+ -webkit-box-shadow: 0px 0px 30px -6px rgba(0,0,0,0.75);
+ -moz-box-shadow: 0px 0px 30px -6px rgba(0,0,0,0.75);
+ box-shadow: 0px 0px 30px -6px rgba(0,0,0,0.75);
+ transition: .5s ease all;
+}
+.et_pb_scroll_top.et-pb-icon:hover {
+ -webkit-box-shadow: 0px 0px 30px -3px rgba(0,0,0,0.75);
+ -moz-box-shadow: 0px 0px 30px -3px rgba(0,0,0,0.75);
+ box-shadow: 0px 0px 30px -3px rgba(0,0,0,0.75);
+}
+.et_pb_scroll_top.et-pb-icon:before {
+ font-size: 40px
+}
+
+/* BLOG POST WHITE SPACE */
+.single .et_pb_post {
+ padding-bottom: 0px !important;
+ margin-bottom: -25px !important;
+}
+
+/* BLURB - ROTATE */
+.mp_m_blurb_rotate .et-pb-icon {
+ -webkit-transition-duration: 0.3s;
+ transition-duration: 0.3s;
+ -webkit-transition-property: transform;
+ transition-property: transform;
+ -webkit-transition-timing-function: ease-out;
+ transition-timing-function: ease-out;
+}
+.mp_m_blurb_rotate:hover .et-pb-icon {
+ -webkit-transform: rotate(20deg);
+ transform: rotate(20deg);
+}
+
+/* HOMEPAGE POST SLIDER MOBILE STYLING */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+.et_pb_post_slider_0.et_pb_slider {
+ padding-bottom: 1em;
+ padding-top: 1em;
+}
+}
+
+/* HOMEPAGE VIDEO ICON MOBILE */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+.et_pb_video_0 .et_pb_video_play {
+ background: rgba(255,255,255,0)!important;
+}
+}
+
+/* ROOM SERVICE ICONS SIZE */
+.room-service-icons {
+  font-size: 2vh!important;
+}
+
+/* BACKGROUND TITLE - LIGHT */
+.background-title-light {
+ color: #e0e0e0; /*** ADJUST BACKGROUND TEXT COLOR ***/
+ font-family: Playfair Display, sans-serif;
+ text-transform: uppercase;
+ font-size: 140px;
+ position: absolute;
+ top: 36px;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ line-height: 1 !important;
+ pointer-events: none;
+}
+
+/* BACKGROUND TITLE - DARK */
+.background-title-dark {
+ color: #252538; /*** ADJUST BACKGROUND TEXT COLOR ***/
+ font-family: Playfair Display, sans-serif;
+ text-transform: uppercase;
+ font-size: 140px;
+ position: absolute;
+ top: 36px;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ line-height: 1 !important;
+ pointer-events: none;
+}
+
+/* FULLWIDTH HEADER STYLING */
+.et_pb_fullwidth_header .et_pb_fullwidth_header_container {
+ padding-top: 100px;
+ padding-bottom: 50px;
+}
+
+/* TESTIMONIAL ARCHIVE COMPANY STYLE */
+.single-testimonials .company_name {
+ font-style: oblique;
+ font-weight: bold;
+}
+
+/* DIVI BLOG EXTRAS REMOVE ANCHOR LINK */
+a.abs-url {
+ pointer-events: none;
+ cursor: default;
+}
+
+/* DIVI BLOG EXTRAS BOTTOM MARGIN */
+.et_pb_post.et_pb_post_extra {
+ margin-bottom: 100px;
+}
+.dining-post-grid {
+ margin-bottom: 0px!important;
+}
+
+/* DIVI BLOG EXTRAS TITLE STYLING */
+.et_pb_blog_extras_0 .et_pb_post.et_pb_post_extra .entry-title {
+ margin-top: -10px;
+}
+
+/* DIVI BLOG EXTRAS BUTTON STYLING */
+.et_pb_post_extra a.more-link {
+ display: block !important; 
+ text-transform: uppercase;
+ text-align: center;
+ font-weight: bold;
+ font-size: 16px;
+ color: #fcfcfc;
+ background: #15bf86;
+ padding-left: 20px;
+ padding-right: 20px;
+ padding-top: 2px;
+ padding-bottom: 2px;
+ letter-spacing: 2px;
+}
+.et_pb_post_extra a.more-link:hover {
+ color: #fcfcfc;
+ background: #1599c1;
+ letter-spacing: 2px;
+}
+
+/* DIVI BLOG EXTRAS LOADING NOTICE */
+.ajax-pagination .el-loader {
+ color: #858585 !important;
+}
+
+/* DIVI BLOG EXTRAS DINING POST GRID */
+.dining-post-grid a:link {
+ color: #171720;
+ pointer-events: none; 
+}
+.dining-post-grid a:visited {
+ color: #171720; 
+}
+.dining-post-grid a:hover {
+ color: #171720; 
+}
+.dining-post-grid a:active {
+ color: #171720; 
+}
+
+/* DIVI BLOG EXTRAS PACKAGES POST GRID */
+.packages-post-grid a:link {
+ color: #171720; 
+ -webkit-transition: all 0.3s ease;
+ -moz-transition: all 0.3s ease;
+ transition: all 0.3s ease;
+}
+.packages-post-grid a:visited {
+ color: #171720; 
+}
+.packages-post-grid a:hover {
+ color: #15bf86; 
+}
+.packages-post-grid a:active {
+ color: #15bf86; 
+}
+.el-dbe-blog-extra.full_width_background .et_pb_post_extra .post-media:hover {
+ opacity: 1;
+}
+
+/* DIVI BLOG EXTRAS SPA POST GRID */
+.spa-post-grid a:link {
+ color: #171720; 
+ -webkit-transition: all 0.3s ease;
+ -moz-transition: all 0.3s ease;
+ transition: all 0.3s ease;
+}
+.spa-post-grid a:visited {
+ color: #171720; 
+}
+.spa-post-grid a:hover {
+ color: #15bf86; 
+}
+.spa-post-grid a:active {
+ color: #15bf86; 
+}
+
+/* DIVI BLOG EXTRAS ROOMS POST GRID */
+.rooms-post-grid a:link {
+ color: #171720; 
+ -webkit-transition: all 0.3s ease;
+ -moz-transition: all 0.3s ease;
+ transition: all 0.3s ease;
+}
+.rooms-post-grid a:visited {
+ color: #171720; 
+}
+.rooms-post-grid a:hover {
+ color: #15bf86; 
+}
+.rooms-post-grid a:active {
+ color: #15bf86; 
+}
+
+/* DIVI BLOG EXTRAS BOX SHADOW - ROOMS */
+@media screen and (min-width: 981px) {
+.et_pb_column_4_4 .et_pb_post_extra.el_dbe_grid_extended .post-media {
+ -webkit-box-shadow:0px 0px 30px #9b9b9b;
+ -moz-box-shadow:0px 0px 30px #9b9b9b;
+ box-shadow:0px 0px 30px #9b9b9b;
+}
+.et_pb_column_4_4 .et_pb_post_extra.el_dbe_grid_extended .post-content {
+ -webkit-box-shadow:0px 0px 30px #9b9b9b;
+ -moz-box-shadow:0px 0px 30px #9b9b9b;
+ box-shadow:0px 0px 30px #9b9b9b;
+}
+.et_pb_column_4_4 .et_pb_post_extra.el_dbe_grid_extended:nth-child(2n+1) .post-media {
+ -webkit-box-shadow:0px 0px 30px #9b9b9b;
+ -moz-box-shadow:0px 0px 30px #9b9b9b;
+ box-shadow:0px 0px 30px #9b9b9b;
+}
+}
+
+/* DIVI BLOG EXTRAS BOX SHADOW - SPA */
+@media screen and (min-width: 981px) {
+.et_pb_column_4_4 .et_pb_post_extra.el_dbe_box_extended .post-media {
+ -webkit-box-shadow:0px 0px 30px #9b9b9b;
+ -moz-box-shadow:0px 0px 30px #9b9b9b;
+ box-shadow:0px 0px 30px #9b9b9b;
+}
+.et_pb_column_4_4 .et_pb_post_extra.el_dbe_box_extended .post-content {
+ -webkit-box-shadow:0px 0px 30px #9b9b9b!important;
+ -moz-box-shadow:0px 0px 30px #9b9b9b!important;
+ box-shadow:0px 0px 30px #9b9b9b!important;
+}
+.et_pb_column_4_4 .et_pb_post_extra.el_dbe_box_extended:nth-child(2n+1) .post-content {
+ -webkit-box-shadow:0px 0px 30px #9b9b9b;
+ -moz-box-shadow:0px 0px 30px #9b9b9b;
+ box-shadow:0px 0px 30px #9b9b9b;
+}
+}
+
+/* DIVI BLOG EXTRAS BOX SHADOW - DINING MENU */
+@media screen and (min-width: 981px) {
+.et_pb_column_4_4 .et_pb_post_extra.el_dbe_block_extended {
+ -webkit-box-shadow:0px 0px 30px #9b9b9b;
+ -moz-box-shadow:0px 0px 30px #9b9b9b;
+ box-shadow:0px 0px 30px #9b9b9b;
+}
+}
+
+/* DIVI BLOG EXTRAS BOX SHADOW - PACKAGES */
+@media screen and (min-width: 981px) {
+.et_pb_section:not(.et_section_specialty) .et_pb_column_4_4 .et_pb_post_extra.el_dbe_full_width_background .post-media {
+ -webkit-box-shadow:0px 0px 30px #9b9b9b;
+ -moz-box-shadow:0px 0px 30px #9b9b9b;
+ box-shadow:0px 0px 30px #9b9b9b;
+}
+}
+
+/* CALDERA FORMS GENERAL STYLING */
+.caldera-grid .form-group {
+ margin-bottom: 24px !important;
+}
+.caldera-grid label {
+ display: none !important;
+}
+.caldera-grid .form-control {
+ border: 1px solid #000000 !important;
+ color: #2d2d2d !important;
+ font-size: 16px !important;
+ font-weight: bold !important;
+ padding: 24px !important;
+}
+.caldera-grid .form-control:focus {
+ border-color: #000000 !important;
+ box-shadow: none !important;
+}
+
+/* CALDERA FORMS BUTTON STYLING */
+.caldera-grid input[type=submit] {
+ color: #fcfcfc; /*** ADJUST BUTTON TEXT COLOR ***/
+ background: #15bf86; /*** ADJUST BUTTON BG COLOR ***/
+ border: 1px solid #15bf86; /*** ADJUST BUTTON BORDER COLOR ***/
+ padding: 8px 20px;
+ font-size: 16px;
+ text-transform: uppercase;
+ text-align: center;
+ font-weight: bold;
+ border-radius: 0px !important;
+ letter-spacing: 2px;
+ float: right;
+ transition: all 0.3s ease-in-out;
+}
+.caldera-grid input[type=submit]:hover {
+ color: #fcfcfc; /*** ADJUST BUTTON TEXT COLOR ON HOVER ***/
+ background: #1599c1; /*** ADJUST BUTTON BG COLOR ON HOVER ***/
+ border-color: #1599c1; /*** ADJUST BUTTON BORDER COLOR ON HOVER ***/
+ letter-spacing: 2px;
+}
+
+/* HBOOK POP-UP CALENDAR STYLING */
+.hb-datepick-popup {
+ font-weight: bold;
+}
+.hb-datepick-legend {
+ font-size: 16px;
+ font-weight: bold;
+ line-height: 30px;
+}
+.hb-dp-month-header {
+ font-size: 16px !important;
+}
+.hb-dp-week-header.hb-dp-clearfix {
+ font-size: 0.60em;
+ font-weight: bold;
+ margin-top: -5px;
+ text-transform: uppercase;
+}
+.hb-dp-day {
+ font-size: 16px;
+}
+
+/* HBOOK BUTTON STYLING */
+p.hb-search-button-wrapper {
+ margin-top: 0em;
+}
+.hbook-wrapper input[type="submit"] {
+ font-size: 16px;
+ font-weight: bold;
+ letter-spacing: 2px;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+.hbook-wrapper input[type="submit"] {
+ font-size: 0.6em;
+}
+}
+
+/* HBOOK FORM FIELD STYLING */
+.hb-search-fields.hb-clearfix {
+ margin-top: -1em;
+}
+.hbook-wrapper label {
+ margin-bottom: -.3em;
+}
+.hbook-wrapper input[type="text"], .hbook-wrapper input[type="number"], .hbook-wrapper select, .hbook-wrapper textarea {
+ background: #f9f9f9 !important;
+ color: #2d2d2d;
+ font-family: 'Lato', sans-serif;
+ font-weight: 700;
+ font-size: 16px;
+}
+.hb-search-fields-and-submit {
+ font-weight: bold;
+ font-size: medium;
+ color: #ffffff;
+ letter-spacing: 0.5px;
+}
+.hb-input-datepicker.hb-check-in-date {
+ color: #000000;
+ font-weight: bold;
+}
+.hb-input-datepicker.hb-check-out-date {
+ color: #000000;
+ font-weight: bold;
+}
+.hb-adults {
+ color: #000000;
+ font-weight: bold;
+}
+.hb-children {
+ color: #000000;
+ font-weight: bold;
+}
+
+/* HBOOK HOMEPAGE SEARCH DATEPICK ICON */
+.hb-datepick-check-in-out-trigger:before {
+ content: "\f073";
+}
+.hb-datepick-check-in-out-trigger {
+ color: #171720;
+ -webkit-transition: color 1s;
+ -moz-transition: color 1s;
+ transition: color 1s;
+ right: 10px;
+ display: block;
+ position: absolute;
+ font-size: 21px;
+ bottom: 20px;
+ cursor: pointer;
+ font-family: FontAwesome;
+}
+.hb-datepick-check-in-out-trigger:hover {
+ color: rgba(23, 23, 32, 0.6);
+ -webkit-transition: color 1s;
+ -moz-transition: color 1s;
+ transition: color 1s;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+.hb-datepick-check-in-out-trigger {
+ bottom: 25px;
+}
+}
+
+/* HBOOK SEARCH SUMMARY STYLING */
+.hb-searched-summary, .hb-search-no-result, .hb-search-error, .hb-accom-list {
+ margin-bottom: 24px;
+ border-bottom: 1px solid #d4d4d4;
+}
+.hb-accom-title {
+ color: #1599c1;
+ font-size: 1.5em;
+}
+.hb-search-result-title-section {
+ margin-top: 24px;
+ margin-bottom: 24px;
+}
+.hb-search-result-title-section h3 {
+ font-size: 1.5em;
+ margin-top: 24px;
+ margin-bottom: 24px;
+}
+.hb-accom-selected {
+ background: #fff !important;
+}
+.hb-check-dates-wrapper {
+ margin-bottom: -0.8em;
+}
+.hb-people-wrapper {
+ margin-bottom: -0.8em;
+}
+.hb-accom-desc {
+ color: #5e5e5e;
+}
+.hb-accom-price {
+ font-size: 1.5em;
+}
+.hb-accom-price-caption {
+ font-size: 1.5em;
+ font-weight: bold;
+}
+a.hb-view-price-breakdown {
+ font-weight: bold;
+ letter-spacing: 1px;
+}
+.hb-price-breakdown-title {
+ font-size: 0.8em;
+ line-height: 2em;
+ text-align: left;
+}
+.hb-price-breakdown-section {
+ text-align: left;
+}
+p.hb-select-accom {
+ margin-top: 10px;
+ float: left;
+}
+p.hb-view-accom {
+ margin-top: 10px;
+ padding-bottom: 1em;
+}
+.hb-accom-selected .hb-accom-selected-name {
+ font-style: italic;
+ padding-top: 15px;
+ padding-bottom: 15px;
+}
+
+/* HBOOK ROOM PAGE SUMMARY STYLING */
+.hb-accom-page .hb-accom {
+ background: #171720 !important;
+}
+.hb-accom-page .hb-accom-desc {
+ color: #fff;
+}
+.hb-accom-page .hb-accom-price {
+ float:none;
+}
+.hb-accom-page .hb-accom-price-caption {
+ float:none;
+}
+.hb-accom-page .hb-price-breakdown-title {
+ text-align: center;
+}
+.hb-accom-page .hb-price-breakdown-section {
+ text-align: center;
+}
+.hb-accom-page p.hb-select-accom {
+ float:none;
+ margin-right: 0px;
+}
+p.hb-booking-searching {
+ color: #000000;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+.hb-vertical-search-form .hb-searched-summary p, .hb-vertical-search-form .hb-check-dates-wrapper {
+ color: #000000;
+}
+.hb-accom-page .hb-accom-desc {
+ color: #000000;
+}
+.hb-accom-page .hb-accom {
+ color: #000000;
+}
+.hb-accom-page .hb-accom {
+ background: #FFFFFF !important;
+}
+}
+
+/* HBOOK CLIENT BOOKING STYLING */
+.hb-options-form h3 {
+ font-size: 1.5em;
+ margin-top: 24px;
+ margin-bottom: 24px;
+}
+p.hb-options-total-price {
+ color: #000000;
+ margin-bottom: 1.2em;
+ margin-top: -1em;
+}
+.hb-details-fields h3 {
+ font-size: 1.5em;
+ margin-top: 24px;
+ margin-bottom: 24px;
+}
+.hb-detail-field {
+ color: #000000;
+ font-weight: bold;
+}
+h3.hb-resa-summary-title {
+ font-size: 1.7em;
+ margin-top: 24px;
+ margin-bottom: 24px;
+}
+.hb-resa-summary {
+ font-size: 18px;
+ margin-top: 1.5em;
+}
+.hb-resa-summary-content {
+ background: #fff !important;
+ border: 2px solid #ccc !important;
+ border-radius: 15px !important;
+ margin-bottom: 1.7em !important;
+ padding: 15px 17px !important;
+}
+.hb-summary-change-search {
+ font-weight: bold;
+}
+.hb-payment-info-wrapper h3 {
+ font-size: 1.5em;
+ margin-top: 24px;
+ margin-bottom: 24px;
+}
+.hb-payment-info-wrapper {
+ margin-bottom: 1.7em;
+}
+.hb-confirm-area h3 {
+ font-size: 1.5em;
+ margin-top: 24px;
+}
+.hb-column-half {
+ padding-bottom: 1em;
+}
+.hb-column-third {
+ padding-bottom: 1em;
+}
+input[type=checkbox] {
+ margin-top: 0.8em;
+}
+input[type=radio] {
+ margin-top: 0.8em;
+}
+
+/* HBOOK HOMEPAGE SEARCH SUMMARY STYLING */
+.hb-accom {
+ background: #fff !important;
+ border: 2px solid #ccc !important;
+ border-radius: 0px !important;
+}
+.hb-summary-change-accom {
+ font-weight: bold;
+}
+
+/* PRE-LOADER - DARK */
+div#et_loading {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ z-index: 999;
+}
+#et_loading:before {
+ display: block;
+ content: "";
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ align-content: center;
+ text-align: center;
+ background: #171720;
+ line-height: 100%;
+ -webkit-animation: curtain 3.5s forwards;
+ animation: curtain 3.5s forwards;
+}
+#et_loading:after {
+ font-family: "etModules";
+ font-size: 3.4em;
+ content: "\e01c";
+ position: fixed;
+ color: #f1f1f1;
+ text-align: center;
+ left: 50%;
+ margin-left: -50px;
+ width: 100px;
+ top: 45%;
+ animation: bounce 1s infinite alternate;
+ -webkit-animation: bounce 1s infinite alternate;
+}
+@keyframes bounce {
+from {
+ transform: translateY(0px);
+}
+to {
+ transform: translateY(-25px);
+}
+}
+@-webkit-keyframes bounce {
+from {
+ transform: translateY(0px);
+}
+to {
+ transform: translateY(-25px);
+}
+}
+
+/* MAIN MENU & SECONDARY MENU STACK ORDER */
+@media screen and (min-width: 1080px) {
+.et_fixed_nav #main-header, .et_fixed_nav #top-header {
+ position: fixed;
+ z-index: 997;
+}
+}
+@media screen and (max-width: 1079px) {
+body.admin-bar.et_fixed_nav.et_secondary_nav_enabled #main-header {
+ position: absolute;
+ z-index: 997;
+}
+}
+
+/* MOBILE MENU BREAKPOINT */
+@media (max-width: 1079px) {
+#et_mobile_nav_menu {
+ display: block;
+} 
+#top-menu {
+ display: none;
+}
+}
+
+/* NEWSLETTER OPTIN TABLET WIDTH */
+@media (max-width: 980px) {
+.et_pb_column .et_pb_newsletter_form {
+ padding-left: 0px;
+ width: 100%;
+}
+}
+
+/* ----------- PUT YOUR CUSTOM CSS BELOW THIS LINE -- DO NOT EDIT ABOVE THIS LINE --------------------------- */
